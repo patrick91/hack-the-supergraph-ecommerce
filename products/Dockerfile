@@ -15,6 +15,4 @@ RUN pdm install --prod --no-lock --no-editable
 EXPOSE 8080
 STOPSIGNAL SIGINT
 
-RUN pdm run prisma generate
-
 CMD ["pdm", "prod-server"]
