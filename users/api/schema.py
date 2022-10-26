@@ -1,3 +1,5 @@
+from typing_extensions import Self
+
 import strawberry
 from strawberry.federation.schema_directives import Key
 
@@ -15,9 +17,9 @@ class Product:
 @strawberry.input
 class OrderFilters:
     order_id: strawberry.ID
-    price_high: float | None
-    price_low: float | None
-    items_in_order: int | None
+    price_high: float | None = None
+    price_low: float | None = None
+    items_in_order: int | None = None
 
 
 @strawberry.type
@@ -37,12 +39,39 @@ class User:
     def orders(self, filter: OrderFilters) -> list[Order | None] | None:
         return None
 
+    @classmethod
+    def resolve_reference(cls, id: strawberry.ID) -> Self:
+        return User(
+            id=id,
+            username="test",
+            cart=Cart(
+                items=[
+                    Product(id=strawberry.ID("1")),
+                    Product(id=strawberry.ID("2")),
+                ],
+                subtotal=100.0,
+            ),
+            shipping_address="123 Main St",
+        )
+
 
 @strawberry.type
 class Query:
     @strawberry.field
     def viewer(self) -> User | None:
-        return None
+        # TODO: maybe use headers to define user
+        return User(
+            id=strawberry.ID("1"),
+            username="test",
+            cart=Cart(
+                items=[
+                    Product(id=strawberry.ID("1")),
+                    Product(id=strawberry.ID("2")),
+                ],
+                subtotal=100.0,
+            ),
+            shipping_address="123 Main St",
+        )
 
 
 schema = strawberry.federation.Schema(

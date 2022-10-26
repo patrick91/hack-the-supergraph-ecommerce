@@ -1,5 +1,4 @@
-# TODO: update to 3.11 when it is out
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # install PDM
 RUN pip install -U pip setuptools wheel

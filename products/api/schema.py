@@ -1,3 +1,5 @@
+from typing_extensions import Self
+
 import strawberry
 
 
@@ -16,6 +18,17 @@ class Product:
     weight: float | None
     price: Money | None
 
+    @classmethod
+    def resolve_reference(cls, id: strawberry.ID) -> Self:
+        return cls(
+            id=id,
+            title="Product Title",
+            description="Product Description",
+            media_url="https://example.com/product.jpg",
+            weight=1.0,
+            price=Money(amount=1.0, currency="USD"),
+        )
+
 
 @strawberry.input
 class ProductSearchInput:
@@ -32,7 +45,14 @@ class Query:
 
     @strawberry.field
     def product(self, id: strawberry.ID) -> Product | None:
-        return None
+        return Product(
+            id=id,
+            title="Product Title",
+            description="Product Description",
+            media_url="https://example.com/product.jpg",
+            weight=1.0,
+            price=Money(amount=1.0, currency="USD"),
+        )
 
 
 schema = strawberry.federation.Schema(

@@ -30,7 +30,12 @@ class Order:
 class Query:
     @strawberry.field
     def order(self, id: strawberry.ID) -> Order | None:
-        return None
+        return Order(
+            id=id,
+            buyer=User(id=strawberry.ID("1")),
+            items=[Product(id=strawberry.ID("1")), Product(id=strawberry.ID("2"))],
+            total=Money(amount=100, currency="USD"),
+        )
 
 
 schema = strawberry.federation.Schema(
