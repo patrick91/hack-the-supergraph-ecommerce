@@ -35,15 +35,7 @@ class Query:
         return None
 
 
-@strawberry.type
-class Mutation:
-    @strawberry.mutation
-    def create_user(self, name: str) -> str:
-        return name
-
-
 schema = strawberry.federation.Schema(
     Query,
-    Mutation,
     enable_federation_2=True,
 )
