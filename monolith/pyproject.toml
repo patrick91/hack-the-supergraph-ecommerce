@@ -1,9 +1,9 @@
 [project]
 authors = []
 dependencies = [
-    "strawberry-graphql==0.141.0.dev.1668092508",
-    "fastapi",
-    "uvicorn",
+  "strawberry-graphql",
+  "fastapi",
+  "uvicorn",
 ]
 description = ""
 name = "api"
@@ -31,7 +31,6 @@ plugins = ["strawberry.ext.mypy_plugin"]
 [tool.pdm.scripts]
 prod-server = "uvicorn main:app --host 0.0.0.0 --port 8080"
 server = "uvicorn main:app --reload"
-export-schema = "strawberry export-schema api.schema"
 
 [tool.pdm.dev-dependencies]
 dev = [
