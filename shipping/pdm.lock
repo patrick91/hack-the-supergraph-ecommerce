@@ -191,7 +191,7 @@ dependencies = [
 
 [[package]]
 name = "strawberry-graphql"
-version = "0.141.0.dev1668092508"
+version = "0.142.0"
 requires_python = ">=3.7,<4.0"
 summary = "A library for creating GraphQL APIs"
 dependencies = [
@@ -238,7 +238,7 @@ summary = "Backport of pathlib-compatible object wrapper for zip files"
 
 [metadata]
 lock_version = "4.0"
-content_hash = "sha256:f33c92f9d0a5b54dd9bf82d9b1a73bdcadc5ed2483888dd44a2849b09f3a6b10"
+content_hash = "sha256:48c291fecd2e0576a01dc5384721fbf188ac13419ef593dee5e0ced535d7a517"
 
 [metadata.files]
 "anyio 3.6.2" = [
@@ -408,9 +408,9 @@ content_hash = "sha256:f33c92f9d0a5b54dd9bf82d9b1a73bdcadc5ed2483888dd44a2849b09
     {url = "https://files.pythonhosted.org/packages/51/37/8ac52116984d6a0d8502ec2c7e4a4a78f862b76410cdb1a4bcb384c91cb3/starlette-0.20.4-py3-none-any.whl", hash = "sha256:c0414d5a56297d37f3db96a84034d61ce29889b9eaccf65eb98a0b39441fcaa3"},
     {url = "https://files.pythonhosted.org/packages/b7/9b/dc9fa4c05a8aceb7abbf057b1279f0007ce8ab42c9b8f31a9c71981955bc/starlette-0.20.4.tar.gz", hash = "sha256:42fcf3122f998fefce3e2c5ad7e5edbf0f02cf685d646a83a08d404726af5084"},
 ]
-"strawberry-graphql 0.141.0.dev1668092508" = [
-    {url = "https://files.pythonhosted.org/packages/25/94/c4604070979752a74c8175f073c967331ab2992cc4e3db0623c1e1e696bd/strawberry_graphql-0.141.0.dev1668092508-py3-none-any.whl", hash = "sha256:042e9f8dc1782b1a9bb7bef7dbf52e604ce860db3fbfab509d1491c29b6b11da"},
-    {url = "https://files.pythonhosted.org/packages/40/6f/aa23790f91ef3414ce76ee531d18fb2cb3703bc1c2e76118c37942f5034f/strawberry_graphql-0.141.0.dev1668092508.tar.gz", hash = "sha256:3c10341478338f3b3035a079e24a6d3272dfffbc37f05a5b5ac545a68453ad2b"},
+"strawberry-graphql 0.142.0" = [
+    {url = "https://files.pythonhosted.org/packages/2d/3a/3c8961fa34b901760bfb76ff408d9f826e38ef4bd38de1e6295edaa36aff/strawberry_graphql-0.142.0.tar.gz", hash = "sha256:9cf4b0f3e9f7d430cbcd3901cb4da1c55829751851128669d2582ad42cbe0deb"},
+    {url = "https://files.pythonhosted.org/packages/e8/df/7150732da5903f694b55029802e5edaa24efcfaa2ba926fb41aea023ece7/strawberry_graphql-0.142.0-py3-none-any.whl", hash = "sha256:dfbc981644c1406b99a079f7a7e33083dd30d031b9cbacd1c24c1c01fcd4145d"},
 ]
 "tomli 2.0.1" = [
     {url = "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},

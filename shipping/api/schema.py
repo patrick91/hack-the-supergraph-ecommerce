@@ -40,6 +40,7 @@ class Order:
         resolver=calculate_shipping_cost,
     )
 
+
 schema = strawberry.federation.Schema(
     enable_federation_2=True,
     types=[Order],
